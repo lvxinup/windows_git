@@ -1,0 +1,16 @@
+﻿生成启动时间为 2019/2/24 20:47:10。
+     1>项目“C:\Users\吕鑫\Desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\旋转数组的最小数字.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt test.cpp
+         test.cpp
+     1>c:\users\吕鑫\desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\test.cpp(9): error C2061: 语法错误: 标识符“vector”
+     1>c:\users\吕鑫\desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\test.cpp(11): error C2065: “rotateArray”: 未声明的标识符
+     1>c:\users\吕鑫\desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\test.cpp(11): error C2228: “.size”的左边必须有类/结构/联合
+                 类型是“unknown-type”
+     1>c:\users\吕鑫\desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\test.cpp(13): error C2065: “rotateArray”: 未声明的标识符
+     1>c:\users\吕鑫\desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\test.cpp(13): fatal error C1903: 无法从以前的错误中恢复；正在停止编译
+     1>已完成生成项目“C:\Users\吕鑫\Desktop\练习代码\旋转数组的最小数字\旋转数组的最小数字\旋转数组的最小数字.vcxproj”(Build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:01.60

@@ -252,72 +252,72 @@ void QuickSort(int* array, int left, int right)	       //快速排序
 	//div+1  right
 	QuickSort(array, div + 1, right);
 }
-//void _MergerSort(int* array, int left, int right, int *tmp)
-//{
-//	//分组
-//	if (left >= right)    //左大于右时，直接返回
-//		return;
-//	if (right - left + 1 < 20)
-//	{
-//		InsertSort(array + left, right - left + 1);//小区间优化：当数据个数（闭区间需要加1）小于20时，直接插入排序
-//		return;
-//	}
-//	int mid = left + (right - left) / 2;
-//	_MergerSort(array, left, mid, tmp);//将左边划分有序
-//	_MergerSort(array, right, mid, tmp);//将右边划分有序
-//
-//	//归并
-//	int begin1 = left, end1 = mid;
-//	int begin2 = mid + 1, end2 = right;
-//	int index = left;
-//	while (begin1 < end1 && begin2 < end2)  //两个有序数组的合并
-//	{
-//		if (array[begin1] <= array[begin2])
-//		{
-//			tmp[index] = array[begin1];
-//			index++;
-//			begin1++;
-//		}
-//		else
-//		{
-//			tmp[index] = array[begin2];
-//			index++;
-//			begin2++;
-//		}
-//	}
-//	if (begin1 > end1)//说明begin2-end2之中还有数据
-//	{
-//		while (begin2 <= end2)
-//		{
-//			tmp[index] = array[begin2];
-//			index++;
-//			begin2++;
-//		}
-//	}
-//	else//说明begin1-end1之中还有数据
-//	{
-//		while (begin1 <= end1)
-//		{
-//			tmp[index] = array[begin1];
-//			index++;
-//			begin1++;
-//		}
-//	}
-//	index = left;
-//	while (index <= right)//tmp是临时数组，需要将有序数据重新放到数组array中
-//	{
-//		array[index] = tmp[index];
-//		index++;
-//	}
-//}
-//void MergerSort(int* array, size_t n)	   //归并排序
-//{
-//	assert(array);
-//	int *tmp = (int *)malloc(sizeof(int)*n);
-//	_MergeSort(array, 0, n - 1, tmp);//tmp是临时数组
-//	free(tmp);
-//	tmp = NULL;
-//}
+void _MergerSort(int* array, int left, int right, int *tmp)
+{
+	//分组
+	if (left >= right)    //左大于右时，直接返回
+		return;
+	if (right - left + 1 < 20)
+	{
+		InsertSort(array + left, right - left + 1);//小区间优化：当数据个数（闭区间需要加1）小于20时，直接插入排序
+		return;
+	}
+	int mid = left + (right - left) / 2;
+	_MergerSort(array, left, mid, tmp);//将左边划分有序
+	_MergerSort(array, right, mid, tmp);//将右边划分有序
+
+	//归并
+	int begin1 = left, end1 = mid;
+	int begin2 = mid + 1, end2 = right;
+	int index = left;
+	while (begin1 < end1 && begin2 < end2)  //两个有序数组的合并
+	{
+		if (array[begin1] <= array[begin2])
+		{
+			tmp[index] = array[begin1];
+			index++;
+			begin1++;
+		}
+		else
+		{
+			tmp[index] = array[begin2];
+			index++;
+			begin2++;
+		}
+	}
+	if (begin1 > end1)//说明begin2-end2之中还有数据
+	{
+		while (begin2 <= end2)
+		{
+			tmp[index] = array[begin2];
+			index++;
+			begin2++;
+		}
+	}
+	else//说明begin1-end1之中还有数据
+	{
+		while (begin1 <= end1)
+		{
+			tmp[index] = array[begin1];
+			index++;
+			begin1++;
+		}
+	}
+	index = left;
+	while (index <= right)//tmp是临时数组，需要将有序数据重新放到数组array中
+	{
+		array[index] = tmp[index];
+		index++;
+	}
+}
+void MergerSort(int* array, size_t n)	   //归并排序
+{
+	assert(array);
+	int *tmp = (int *)malloc(sizeof(int)*n);
+	_MergeSort(array, 0, n - 1, tmp);//tmp是临时数组
+	free(tmp);
+	tmp = NULL;
+}
 
 void CountSort(int* array, size_t n)	   //计数排序
 {
@@ -361,16 +361,24 @@ void CountSort(int* array, size_t n)	   //计数排序
 
 void TestSort()
  {
-	int array[] = { 1, 9, 0, 5, 4, 6, 3, 7, 2, 8 };
+	int array[] = { 1, 9, 0, 5, 4, 6, 3, 7, 2, 8 };	
+	int i = 0;
+	printf("排序之前：\n");
+	for (i = 0; i < sizeof(array) / sizeof(array[0]); i++)
+	{
+		printf("%d ", array[i]);
+	}
 	//InsertSort(array, 10);     //直接插入排序
 	//HillSort(array, 10);      // 希尔排序
 	//SelectSort(array, 10); //直接选择排序
 	//HeapSort(array, 10);     //堆排序
-	QuickSort(array, 0, 9);    //快速排序
+	//QuickSort(array, 0, 9);    //快速排序
 	//BubbleSort(array, 10);     //冒泡排序
-	//MergerSort(array, 10);      //归并排序
+	MergerSort(array, 10);      //归并排序
 	//CountSort(array, 10);    //计数排序
-	int i = 0;
+
+	printf("\n");
+	printf("排序之后：\n");
 	for (i = 0; i < sizeof(array) / sizeof(array[0]); i++)
 	{
 		printf("%d ", array[i]);

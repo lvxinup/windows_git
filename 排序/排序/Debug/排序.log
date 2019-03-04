@@ -1,23 +1,11 @@
-﻿生成启动时间为 2018/6/4 14:33:32。
-     1>项目“D:\比特科技代码\代码\排序\排序\排序.vcxproj”在节点 2 上(Build 个目标)。
-     1>ClCompile:
-         D:\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt test.c
-         test.c
-     1>d:\比特科技代码\代码\排序\排序\sort.h(31): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(53): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(73): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(76): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(96): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(98): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(140): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(142): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(328): warning C4018: “<”: 有符号/无符号不匹配
-     1>d:\比特科技代码\代码\排序\排序\sort.h(343): warning C4018: “<”: 有符号/无符号不匹配
-       Link:
-         D:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\比特科技代码\代码\排序\Debug\排序.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\比特科技代码\代码\排序\Debug\排序.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\比特科技代码\代码\排序\Debug\排序.lib" /MACHINE:X86 Debug\test.obj
-         排序.vcxproj -> D:\比特科技代码\代码\排序\Debug\排序.exe
-     1>已完成生成项目“D:\比特科技代码\代码\排序\排序\排序.vcxproj”(Build 个目标)的操作。
+﻿生成启动时间为 2019/3/4 16:07:13。
+     1>项目“C:\Users\吕鑫\Desktop\练习代码\排序\排序\排序.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         D:\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\吕鑫\Desktop\练习代码\排序\Debug\排序.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\吕鑫\Desktop\练习代码\排序\Debug\排序.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\吕鑫\Desktop\练习代码\排序\Debug\排序.lib" /MACHINE:X86 Debug\test.obj
+     1>test.obj : error LNK2019: 无法解析的外部符号 __MergeSort，该符号在函数 _MergerSort 中被引用
+     1>C:\Users\吕鑫\Desktop\练习代码\排序\Debug\排序.exe : fatal error LNK1120: 1 个无法解析的外部命令
+     1>已完成生成项目“C:\Users\吕鑫\Desktop\练习代码\排序\排序\排序.vcxproj”(Build 个目标)的操作 - 失败。
 
-生成成功。
+生成失败。
 
-已用时间 00:00:00.95
+已用时间 00:00:00.63
